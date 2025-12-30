@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto+Slab:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "roboto mono", monospace;
+    background-color: rgb(3, 166, 247);
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0 32px;
+}
+
+.register-container {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 12px 48px;
+    width: 400px;
+    border-radius: 21px;
+}
+
+.register-container h1 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 32px;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 12px;
+}
+
+.register-container label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 17px;
+}
+
+.register-container input[type="text"],
+.register-container input[type="password"] {
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    padding: 8px;
+    font-size: 18px;
+    border-radius: 12px;
+    border: 1px solid #888888;
+    margin-bottom: 24px;
+}
+
+.register-container button.submit-button {
+    background-color: rgb(15, 15, 15);
+    color: white;
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    margin-bottom: 20px;
+}
+
+.register-container button.submit-button:hover {
+    background-color: #555;
+}
+
+.register-container button.submit-button:active {
+    background-color: #777;
+    transform: scale(0.98);
+}
