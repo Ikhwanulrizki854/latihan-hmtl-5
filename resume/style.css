@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; 
+    padding: 20px;
+}
+
+.resume {
+    background-color: white;
+    max-width: 800px;
+    padding: 40px 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.photo img {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-text h1 {
+    font-size: 36px;
+    margin-bottom: 5px;
+    color: #111;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.header-text p {
+    font-size: 18px;
+    color: #006b96; 
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.contact-item {
+    text-decoration: none; 
+    color: #555;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: fit-content; 
+    transition: all 0.3s ease; 
+}
+
+.contact-item i {
+    color: #006b96; 
+    width: 20px;
+    text-align: center;
+}
+
+a.contact-item:hover {
+    color: #006b96;
+    transform: translateX(5px); 
+}
+
+section {
+    margin-bottom: 35px;
+}
+
+section h2 {
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border-left: 4px solid #006b96;
+    padding-left: 15px;
+    margin-bottom: 20px;
+    color: #222;
+    font-weight: 700;
+}
+
+.item {
+    margin-bottom: 30px;
+}
+
+.item:last-child {
+    margin-bottom: 0;
+}
+
+.item h3 {
+    font-size: 18px;
+    color: #111;
+    font-weight: 600;
+}
+
+.item .date {
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 8px;
+    display: block;
+    font-style: italic;
+}
+
+.skills ul {
+    list-style: none;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.skills li {
+    background: #e0f7fa;
+    border-left: 5px solid #006b96;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: #00796b;
+}
+
+.skills li:hover {
+    background: #cbf0f5; /* Efek hover skill */
+}
+
+@media print {
+    body {
+        background: white;
+        padding: 0;
+    }
+    .resume {
+        box-shadow: none;
+        padding: 0;
+    }
+    .contact-item {
+        color: black;
+    }
+}
+
+/* --- MEDIA QUERY UNTUK HP (RESPONSIF) --- */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .resume {
+        padding: 30px 20px;
+    }
+
+    header {
+        flex-direction: column; 
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .header-text h1 {
+        font-size: 28px;
+    }
+
+    .header-text p {
+        font-size: 16px;
+    }
+
+    .contact {
+        align-items: center; 
+    }
+}
