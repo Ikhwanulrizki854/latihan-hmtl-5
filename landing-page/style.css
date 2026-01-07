@@ -69,3 +69,24 @@ header {
 .button:hover {
     background-color: white;
 }
+
+/* Bagian Fitur */
+.features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+}
+
+.feature {
+    flex: 1 1 250px;
+    max-width: 300px;
+    margin: 20px;
+    text-align: center;
+}
+
+.feature h3 {
+    color: #764ba2;
+    margin-bottom: 10px;
+}
