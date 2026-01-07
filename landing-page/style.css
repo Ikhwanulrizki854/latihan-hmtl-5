@@ -343,3 +343,84 @@ header {
     max-height: 500px; 
     padding: 15px 24px 24px 24px;
 }
+
+/* Bagian CTA*/
+.cta {
+    position: relative; 
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+    overflow: hidden; /* Mencegah dekorasi keluar dari kotak */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Dekorasi Lingkaran Abstrak di Background */
+.cta::before,
+.cta::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1); /* Putih transparan */
+    z-index: 0; /* Taruh di belakang teks */
+}
+
+/* Lingkaran Kiri Atas */
+.cta::before {
+    width: 300px;
+    height: 300px;
+    top: -100px;
+    left: -100px;
+}
+
+/* Lingkaran Kanan Bawah */
+.cta::after {
+    width: 200px;
+    height: 200px;
+    bottom: -50px;
+    right: -50px;
+}
+
+/* Konten Teks CTA */
+.cta h2 {
+    font-size: clamp(28px, 5vw, 42px); /* Responsif & Besar */
+    margin-bottom: 20px;
+    font-weight: 800;
+    z-index: 1; /* Agar tampil di atas dekorasi */
+    position: relative;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.cta p {
+    font-size: 18px;
+    max-width: 600px;
+    margin-bottom: 40px;
+    color: rgba(255, 255, 255, 0.9);
+    z-index: 1;
+    position: relative;
+    line-height: 1.6;
+}
+
+/* Tombol Khusus di dalam CTA */
+.cta .button {
+    background-color: white;
+    color: #764ba2;
+    font-weight: bold;
+    padding: 18px 50px; /* Lebih besar dari tombol biasa */
+    z-index: 1;
+    position: relative;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Bayangan lembut */
+    display: inline-block; 
+    margin-top: 0; /* Reset margin lama */
+}
+
+/* Efek Hover Tombol CTA */
+.cta .button:hover {
+    transform: translateY(-5px) scale(1.05); /* Naik dan membesar sedikit */
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2); /* Bayangan makin kuat */
+    background-color: #fff;
+    color: #5b3785; /* Warna ungu lebih gelap saat hover */
+}
