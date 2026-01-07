@@ -424,3 +424,66 @@ header {
     background-color: #fff;
     color: #5b3785; /* Warna ungu lebih gelap saat hover */
 }
+
+/* Bagian Newsletter */
+/* --- Bagian Newsletter (Fixed & Polished) --- */
+.newsletter {
+    background-color: #f9f9f9; /* Warna abu-abu sangat muda agar beda dikit dari putih */
+    padding: 80px 20px; /* Typo 2opx diperbaiki jadi 20px */
+    text-align: center;
+    border-top: 1px solid #eee;
+}
+
+.newsletter h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.newsletter p {
+    color: #666;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Menggunakan Flexbox untuk form agar rapi di tengah */
+.newsletter form {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Jarak antara input dan tombol */
+    flex-wrap: wrap; /* Agar turun ke bawah kalau di HP layar kecil */
+}
+
+.newsletter input[type="email"] {
+    padding: 12px 20px;
+    width: 300px;
+    border: 1px solid #ddd; /* Typo '1 px' diperbaiki */
+    border-radius: 50px; /* Dibuat bulat agar serasi dengan tema */
+    outline: none;
+    transition: 0.3s;
+    font-size: 16px;
+}
+
+/* Efek saat input diklik/fokus */
+.newsletter input[type="email"]:focus {
+    border-color: #764ba2;
+    box-shadow: 0 0 8px rgba(118, 75, 162, 0.2);
+}
+
+.newsletter button {
+    padding: 12px 30px;
+    border: none;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Pakai gradasi tema */
+    color: white;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.newsletter button:hover {
+    background-color: #5a3c91;
+}
