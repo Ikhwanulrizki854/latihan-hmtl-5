@@ -90,3 +90,84 @@ header {
     color: #764ba2;
     margin-bottom: 10px;
 }
+
+/* Bagian Testimoni */
+.testimonials {
+    padding: 60px 20px;
+    background-color: white;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #333;
+    position: relative;
+    display: inline-block;
+}
+
+/* Garis dekorasi di bawah judul */
+.testimonials h2::after {
+    content: '';
+    width: 50px;
+    height: 4px;
+    background: #764ba2;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.testimonial-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.testimonial {
+    max-width: 350px;
+    background-color: #fff;
+    padding: 40px 30px;
+    border-radius: 15px;
+    /* Memberikan efek bayangan lembut */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    border: 1px solid #eee;
+}
+
+/* Efek saat mouse mendekat */
+.testimonial:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(118, 75, 162, 0.2);
+}
+
+.testimonial p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.testimonial h4 {
+    font-size: 18px;
+    color: #764ba2;
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Tambahan dekorasi tanda kutip */
+.testimonial::before {
+    content: '"';
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-size: 60px;
+    color: #764ba2;
+    opacity: 0.1;
+    font-family: serif;
+}
