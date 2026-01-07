@@ -72,23 +72,75 @@ header {
 
 /* Bagian Fitur */
 .features {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 60px 20px;
-    background-color: #f9f9f9;
+    padding: 100px 20px;
+    background-color: #fcfaff;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .feature {
-    flex: 1 1 250px;
-    max-width: 300px;
-    margin: 20px;
+    background: #ffffff;
+    padding: 50px 30px;
+    border-radius: 20px;
     text-align: center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(118, 75, 162, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+/*Membuat Lingkaran dekorasi di belakang kartu */
+.feature::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-radius: 50%;
+    opacity: 0.05;
+    transition: 0.4s;
+}
+
+.feature:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 40px rgba(118, 75, 162, 0.15);
+    border-color: #764ba2;
+}
+
+.feature:hover::before {
+    transform: scale(2);
+    opacity: 0.1;
 }
 
 .feature h3 {
+    font-size: 24px;
     color: #764ba2;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.feature p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* Menambahkan aksen garis di bawah judul fitur */
+.feature h3::after {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: #667eea;
+    margin: 10px auto 0;
+    border-radius: 10px;
 }
 
 /* Bagian Testimoni */
